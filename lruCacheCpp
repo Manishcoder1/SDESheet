@@ -64,7 +64,13 @@ public:
           deletenode(tail->prev);
         }
         
-        addnode(new node(key_, value));
+        node* var = new node(key_,value);
+        addnode(var);
+        
+        // I don't understand why TLE when used line 67,68 code instead of 73
+        
+        
+        //addnode(new node(key_, value));
         m[key_] = head->next; 
     }
 };
